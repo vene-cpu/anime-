@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anime World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #0a0a1a, #14142b);
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: #1c1c3c;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #6633ff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    /* Menu horizontal */
+    nav.horizontal {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav.horizontal a {
+      color: #bbb;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav.horizontal a:hover,
+    nav.horizontal a.active {
+      background: #6633ff;
+      color: white;
+    }
+
+    /* Estrutura com menu lateral */
+    .container {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      flex: 1;
+    }
+
+    /* Menu vertical */
+    nav.vertical {
+      background: #1b1b2d;
+      padding: 20px;
+      border-right: 2px solid #6633ff;
+    }
+
+    nav.vertical h3 {
+      color: #aaa;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    nav.vertical a {
+      display: block;
+      color: #ddd;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      transition: 0.2s;
+    }
+
+    nav.vertical a:hover,
+    nav.vertical a.active {
+      background: #6633ff;
+      color: white;
+    }
+
+    /* Conteúdo principal */
+    main {
+      padding: 20px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.05);
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: none; /* escondido por padrão */
+    }
+
+    section.active {
+      display: block; /* apenas o ativo aparece */
+    }
+
+    section h2 {
+      color: #a88bff;
+    }
+
+    section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #1c1c3c;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 800px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      nav.vertical {
+        border-right: none;
+        border-bottom: 2px solid #6633ff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Anime World</h1>
+    <nav class="horizontal">
+      <a href="#" data-section="acao">Acção</a>
+      <a href="#" data-section="terror">Terror</a>
+      <a href="#" data-section="fantasia">Fantasia</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <nav class="vertical">
+      <h3>Géneros</h3>
+      <a href="#" data-section="romance">Romance</a>
+      <a href="#" data-section="esporte">Esporte</a>
+      <a href="#" data-section="ficcao">Ficção Científica</a>
+    </nav>
+
+    <main>
+      <!-- Acção -->
+      <section id="acao" class="active">
+        <h2>Acção</h2>
+        <p>Animes cheios de ritmo, batalhas e adrenalina.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5SBQ7LM_2E4_Zt_EmX7Fn7MHgcxEHGZS7puSMFiJHsg&s=10.jpg" alt="Anime de ação">
+        <p>Attack on Titan é um anime de ação, fantasia e terror que se passa em um mundo onde a humanidade está à beira da extinção devido à aparição de criaturas gigantescas conhecidas como Titãs. A história segue Eren Yeager e seus amigos Mikasa e Armin, que se juntam à Divisão de Reconhecimento para lutar contra os Titãs e descobrir a verdade sobre sua origem e o mundo em que vivem.</p>
+
+
+<p>Attack on Titan está disponível para streaming no Crunchyroll, Funimation e HIDIVE, com legendas em português. A série tem 4 temporadas e é considerada uma das melhores séries de anime de todos os tempos.</p>
+
+No geral, Attack on Titan é uma série emocionante e intensa que combina ação, fantasia e terror de forma eficaz. Se você gosta de anime de ação e aventura, é uma ótima escolha.
+        
+        
+        
+        
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6xYZk4cn4JQR2cNsJw42x0s1KFkj7tuMzPM9Qs3FEQ&s=10.jpg" alt="Anime de ação">
+        <p>Demon Slayer: Kimetsu no Yaiba é um anime de ação e fantasia sombria que segue a história de Tanjiro Kamado, um jovem que se torna um caçador de demônios após a morte de sua família.</p>
+
+<p>Tanjiro é um jovem que vive com sua mãe e irmã em uma pequena vila. No entanto, sua vida muda drasticamente quando sua família é atacada por demônios, e ele é o único sobrevivente. Tanjiro decide se tornar um caçador de demônios para vingar sua família e encontrar uma cura para sua irmã, Nezuko, que foi transformada em um demônio.</p>
+
+<p>Demon Slayer está disponível para streaming no Crunchyroll e Funimation, com legendas em português. A série tem várias temporadas e é considerada uma das melhores séries de anime de ação.</p>
+
+<p>No geral, Demon Slayer é uma série emocionante e visualmente impressionante que combina ação, fantasia sombria e drama. Se você gosta de anime de ação e aventura, é uma ótima escolha.</p>
+        
+        
+        
+        
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStO7RRXJKxiYjnjBy2slrNoRr54EXaggAf1y7opBhagg&s=10.jpg" alt="Anime de ação">
+        <p> Jujutsu Kaisen é um anime de ação e fantasia sombria que segue a história de Yuji Itadori, um jovem que se torna um feiticeiro de Jujutsu após ingerir um dedo de Sukuna, um poderoso demônio.</p>
+
+<p>Yuji é um estudante do ensino médio que se junta a uma organização secreta de feiticeiros de Jujutsu para lutar contra as maldições que ameaçam a humanidade. Com a ajuda de seus amigos e mentores, Yuji precisa aprender a controlar o poder de Sukuna e lutar contra as forças do mal.</p>
+
+
+<p>Jujutsu Kaisen está disponível para streaming no Crunchyroll e HIDIVE, com legendas em português. A série tem várias temporadas e é considerada uma das melhores séries de anime de ação.</p>
+
+<p>No geral, Jujutsu Kaisen é uma série emocionante e visualmente impressionante que combina ação, fantasia sombria e drama. Se você gosta de anime de ação e aventura, é uma ótima escolha.</p>
+
+<h1>Assista Animes de Acção</h1>
+<p>Clique no link abaixo para ver os animes de ação na Crunchyroll:</p>
+
+<a href="https://www.crunchyroll.com/videos/action" target="_blank" rel="noopener noreferrer">
+  Ver animes de ação Crunchyroll
+</a>
+        
+      </section>
+
+      <!-- Terror -->
+      <section id="terror">
+        <h2>Terror</h2>
+        <p>Histórias sombrias e assustadoras que desafiam sua coragem.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgkc85dvHhu_PEgqZLvjXqtVLk4Zgj_sMElQh5Y3rURg&s=10.jpg" alt="Anime de terror">
+        <p>Another é um anime de terror psicológico que segue a história de Kouichi Sakakibara, um estudante que retorna à sua cidade natal após uma longa ausência e se depara com uma série de mortes misteriosas e inexplicáveis.</p>
+
+<p>A história se passa em uma pequena cidade japonesa, onde uma série de mortes trágicas e inexplicáveis ocorre há 26 anos, sempre começando quando um determinado aluno da turma da terceira série do ensino médio morre de forma inesperada. Kouichi logo descobre que a cidade está sendo assolada por uma entidade sobrenatural que causa a morte dessas pessoas.</p>
+
+<p>Another está disponível para streaming no Crunchyroll e HIDIVE, com legendas em português. A série tem 12 episódios e é considerada uma das melhores séries de terror de anime.</p>
+        
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPFRONARS0ibpXY_FvU-i2AFq7YqTgSi21CKYKXKy4Bw&s=10.jpg" alt="Anime de terror">
+       <p>Devilman Crybaby é um anime de terror e ação que reimagina a clássica história de Devilman. A série segue Akira Fudo, um jovem tímido e frágil que vive com seu amigo Ryo Asamon e estuda na mesma escola que a bela e popular Miki Makimura.</p>
+
+<p>A história começa quando Akira se encontra com um demônio chamado Devilman, que lhe oferece um poder incrível: a capacidade de se transformar em um demônio poderoso. Akira aceita a oferta e se torna Devilman, mas logo descobre que o mundo está repleto de demônios disfarçados de humanos. Com a ajuda de seus amigos, Akira precisa lutar contra os demônios e descobrir quem é amigo ou inimigo.</p>
+
+<p>Devilman Crybaby está disponível para streaming na Netflix, com legendas em português. A série tem 10 episódios e é considerada uma das melhores séries de anime de terror.</p>
+        
+        <h1>Assista Animes de Terror</h1>
+<p>Clique no link abaixo para ver várias opções de animes de terror na Crunchyroll:</p>
+
+<a href="https://www.crunchyroll.com/search?from=&q=horror&tab=series" target="_blank" rel="noopener noreferrer">
+  Ver animes de terror Crunchyroll
+</a>
+        
+        
+      </section>
+
+      <!-- Fantasia -->
+      <section id="fantasia">
+        <h2>Fantasia</h2>
+        <p>Mundos mágicos, criaturas e aventuras inesquecíveis.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBVEq-gXkc9m-kKE2PCa_WFAApqSTaHJKxPTAYWuXDuw&s=10.jpg" alt="Anime de fantasia">
+        </p>Fairy Tail é um anime de fantasia e aventura que segue as jornadas de Lucy, uma jovem maga, e Natsu Dragneel, um mago do fogo, em uma guilda de magos chamada Fairy Tail.</p>
+
+<p>A história se passa no mundo de Fiore, onde os magos se reúnem em guildas para realizar missões e ganhar fama. Lucy se junta à Fairy Tail e forma uma equipe com Natsu, Happy, um Exceed (um gato alado), e outros magos. Juntos, eles enfrentam desafios e batalhas épicas contra forças malignas que ameaçam o mundo.</p>
+
+<p>Fairy Tail está disponível para streaming no Crunchyroll e Funimation, com legendas em português. A série tem 328 episódios, divididos em várias temporadas.</p>
+
+<p>A série também tem uma sequência, Fairy Tail: Final Season, que continua a história após os eventos da série original.</p>
+
+        
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzzSfPG18jtPvkS-Ujpey0c_y6h4UEPMa47KS_Evv4BQ&s=10.jpg" alt="Anime de fantasia">
+        <p>Frieren é um anime que segue a história de uma maga elfa que, após derrotar o rei demônio, decide viajar pelo mundo para entender melhor os humanos e suas emoções. A série explora temas de mortalidade, amizade e o valor da vida.
+
+<p>A série está disponível para streaming no Crunchyroll e HIDIVE, com legendas em português.</p>
+
+<h1>Assista Animes de Fantasia</h1>
+<p>Clique no link abaixo para abrir uma página com vários animes de fantasia :</p>
+
+<a href="https://www.crunchyroll.com/videos/fantasy?srsltid=F8KpEQzZ8" target="_blank" rel="noopener noreferrer">
+  Ir para Crunchyroll Fantasia
+</a>
+
+        
+      </section>
+
+      <!-- Romance -->
+      <section id="romance">
+        <h2>Romance</h2>
+        <p>Amor, drama e emoções profundas que tocam o coração.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnLitn8KhSo80_TNMEQbJB5ppC9roJYKcZ6Fwu5jy1uw&s=10.jpg" alt="Anime de romance">
+        </p> Fruits Basket é um anime popular baseado no mangá de Natsuki Takaya. A história segue Tohru Honda, uma estudante do ensino médio que se vê obrigada a viver em uma tenda após a morte de sua mãe. Ela descobre que a família Sohma, que mora na propriedade onde está sua tenda, é alvo de uma maldição que os transforma em animais do zodíaco chinês quando são abraçados por alguém do sexo oposto.</p>
+
+
+<p>Tohru é acolhida pela família Sohma e logo descobre que eles estão procurando uma maneira de quebrar a maldição que os afeta. Ao longo da série, Tohru e os Sohma enfrentam desafios emocionais e lutam para superar seus passados traumáticos. A série explora temas como família, amizade, amor e autoaceitação</p>
+
+
+<p>Fruits Basket está disponível para streaming no Crunchyroll, com três temporadas e 13 episódios na terceira temporada. A série também está disponível no Amazon Channel e pode ser assistida com legendas em português.</p>
+
+
+<p>Fruits Basket teve um impacto significativo nos fãs mais jovens de anime, oferecendo uma perspectiva diferente dos padrões estabelecidos pelos animes shonen. A série é conhecida por sua abordagem emocional e profunda dos personagens.</p>
+
+
+<p>Fruits Basket pertence aos gêneros de fantasia, romance e slice of life, com elementos de comédia e drama.</p>
+
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuACdtTZhGuVnB62htiBgZulR3PRhsilSXkuCNL3hxfQ&s=10.jpg"alt ="Anime de romance">
+      <p> Nina the Starry Bride é um anime que combina fantasia, romance e drama, com uma protagonista feminina forte e independente. A história segue Nina, uma jovem órfã que se vê obrigada a assumir a identidade de uma sacerdotisa falecida para se casar com um príncipe de um reino distante. No entanto, ela se encontra dividida entre dois homens: o Príncipe Azure, que a acolheu, e o Príncipe Sett, com quem ela é prometida em casamento.</p>
+
+
+<p>A história se passa no reino de Fortna, onde Nina é encontrada pelo Príncipe Azure, que se assemelha à falecida sacerdotisa Astral Alisha. Nina decide assumir a identidade de Alisha para proteger sua vida e se vê envolvida em intrigas políticas e românticas.</p>
+
+
+<p>Nina the Starry Bride está disponível para streaming no Crunchyroll e Amazon Channel, com legendas em português. A série tem 2 temporadas e 12 episódios, com uma classificação de idade de 14 anos ou mais.</p>
+
+<p>No geral, Nina the Starry Bride é um anime interessante para quem gosta de fantasia, romance e drama, com uma protagonista forte e uma história envolvente.<p>
+    
+      
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_L9OGIJy6qf5-Y2ePu9uagtC5rPH2S0QspQjKPTzxaA&s=10.jpg"alt="Anime de romance">
+    <p>O anime "7th Time Loop: The Villainess Enjoys a Carefree Life Married to Her Worst Enemy" é uma série de anime japonesa adaptada de uma série de light novel e web novel. A história segue Rishe Irmgard Weitzner, uma duquesa que já viveu sete vidas e sempre morre em circunstâncias trágicas. Determinada a viver uma vida tranquila e sem problemas, Rishe decide usar suas habilidades e conhecimentos adquiridos em vidas anteriores para evitar uma guerra e viver uma vida feliz.</p>
+
+<p>No entanto, seu plano é complicado quando ela é proposta em casamento pelo príncipe Arnold, que a matou em sua vida anterior. Rishe decide aceitar a proposta e trabalhar para evitar a guerra, enquanto também desenvolve uma relação complexa com Arnold.</p>
+
+
+<p>-Gênero: Romance, Fantasia, Drama
+- Episódios: 12
+- Duração: 23 minutos por episódio
+- Classificação: PG-13
+- Estúdio: Studio KAI e HORNETS
+- Disponibilidade: Crunchyroll</p>
+
+<p>A série recebeu uma boa resposta dos espectadores, com uma pontuação de 7,52 no MyAnimeList. Os fãs elogiam a protagonista forte e independente, a trama envolvente e a relação complexa entre Rishe e Arnold</p>
+      
+      <h1>Assista Animes de Romance 💕</h1>
+  <p>Clique no link abaixo para abrir uma página com vários animes de romance:</p>
+
+  <a href="https://www.crunchyroll.com/videos/romance" target="_blank">
+    👉 Ver Animes de Romance no Crunchyroll
+  </a>
+
+
+      </section>
+
+      <!-- Esporte -->
+      <section id="esporte">
+        <h2>Esporte</h2>
+        <p>Competição, superação e o verdadeiro espírito de equipe.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScK7tiZNbUmtTB0CTBvKzolCQCl-uIprotsstVU1iSQg&s=10.jpg" alt="Anime de esporte">
+        <p> Blue Lock é um anime que segue a história de jovens jogadores de futebol que buscam se tornar o melhor atacante do mundo. A Associação Japonesa de Futebol cria um programa de treinamento rigoroso, o Blue Lock, para encontrar o jogador perfeito para liderar a seleção japonesa na Copa do Mundo.</p>
+
+
+<p>Trezentos jogadores do ensino médio se candidatam ao programa, mas apenas um sairá vencedor. Os jogadores precisam superar desafios extremos e trabalhar em equipe para desenvolver suas habilidades e alcançar o objetivo comum.</p>
+
+
+<p>A primeira temporada de Blue Lock está disponível para streaming no Crunchyroll e HBO Max, com 24 episódios em HD e legendas em português. A segunda temporada foi lançada em outubro de 2024</p>
+        
+  
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6pWNKb_-8vnzsESIhce6lp4VM9uONjSehdasF_Bal-Q&s=10.jpg"alt="Animes de esporte">
+        
+        <p>Haikyuu é um anime de esportes que segue a história de Shoyo Hinata, um estudante do ensino fundamental que se torna fã de vôlei após assistir a uma partida de um jogador habilidoso conhecido como "Pequeno Gigante". Determinado a se tornar um grande atleta, mesmo com sua baixa estatura, Hinata se junta ao clube de vôlei de sua escola e, após três anos, finalmente consegue completar a equipe e participar do Torneio de Primavera.</p>
+
+
+<p>A história se desenvolve em torno da equipe de vôlei da escola Karasuno, que tenta se recuperar de um passado glorioso. Hinata e seu companheiro de equipe, Tobio Kageyama, um jogador habilidoso conhecido como "Rei da Quadra", trabalham juntos para levar a equipe ao sucesso. Ao longo do caminho, eles enfrentam desafios e adversários formidáveis, desenvolvendo suas habilidades e trabalhando em equipe.</p>
+
+<p>Haikyuu tem 4 temporadas, com um total de 85 episódios. A série também inclui alguns OVAs e filmes compilatórios. Aqui está uma visão geral das temporadas.</p>
+ <p>Temporada: 25 episódios, que adaptam os capítulos 1 ao 71 do mangá.
+ <p>Temporada: 25 episódios, que adaptam os capítulos 72 ao 149 do mangá.</p>
+ <p> Temporada: 10 episódios, que adaptam os capítulos 150 ao 190 do mangá.</p>
+ <p>Temporada: 25 episódios, que adaptam os capítulos 191 ao 292 do mangá.</p>
+
+Haikyuu está disponível para streaming no Crunchyroll, HBO Max e Netflix, com legendas em português. Você pode assistir à primeira temporada com 25 episódios em HD e áudio em português, francês, japonês, alemão e espanhol.</p>
+
+<p>Haikyuu é um anime de esportes, com foco em vôlei, amizade e superação. A série é conhecida por sua animação vibrante e personagens carismáticos, tornando-a uma escolha popular entre os fãs de anime</p>
+
+<h1>Assista Animes de Esporte</h1>
+<p>Clique no link abaixo para ver os animes de esporte na Crunchyroll:</p>
+
+<a href="https://www.crunchyroll.com/videos/sports" target="_blank" rel="noopener noreferrer">
+  Ver animes de esporte Crunchyroll
+</a>
+        
+      </section>
+
+      <!-- Ficção -->
+      <section id="ficcao">
+        <h2>Ficção Científica</h2>
+        <p>Futuros distantes, tecnologia e viagens espaciais incríveis.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqhNwqIv3dRdVuTq300Vazvj7gwh0ldVNPEMlZcrxlDg&s=10.jpg" alt="Anime de ficção científica">
+        <p>Cowboy Bebop é um anime clássico que combina elementos de ficção científica, ação, aventura e jazz. A história se passa no ano de 2071 e segue as aventuras da tripulação da nave espacial Bebop, que viaja pelo sistema solar em busca de criminosos.</p>
+
+<p>A série segue Spike Spiegel, um caçador de recompensas habilidoso e misterioso, e sua tripulação, incluindo Jet Black, um ex-policia; Faye Valentine, uma mulher fatal e sedutora; e Ed, uma jovem hacker. Juntos, eles enfrentam desafios e perigos enquanto perseguem seus objetivos.</p>
+
+<p>Cowboy Bebop está disponível para streaming no Netflix, com legendas em português. A série tem 26 episódios e é considerada uma das melhores séries de anime de todos os tempos.</p>
+
+        
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbO52LDVe_nruCo44gFpSzfKPXtpwafj2McJ5kmPkfMQ&s=10.jpg" alt="Anime de ficção científica">
+        <p>Tengoku-Daimakyou (ou Heavenly Delusion) é um anime que combina elementos de fantasia, aventura e mistério. A história se passa em um mundo pós-apocalíptico e segue as jornadas de dois personagens principais: Maruchino e Kirishima.</p>
+
+<p>Maruchino é uma garota que vive em uma comunidade isolada e é considerada uma "criança celestial" devido às suas habilidades especiais. Kirishima é um homem que busca vingança contra os "Deuses" que mataram sua namorada. Quando Maruchino foge da comunidade, Kirishima a encontra e juntos eles embarcam em uma jornada para descobrir a verdade sobre o mundo e suas próprias origens.</p>
+ 
+<p>A série está disponível para streaming no Crunchyroll e HIDIVE, com legendas em português. A primeira temporada tem 13 episódios e foi lançada em abril de 2023.</p>
+
+</a>
+<h1>Assista Animes de Ficção Científica</h1>
+<p>Clique no link abaixo para abrir uma página com vários animes de ficção científica:</p>
+
+<h1>Anime de Ficção Científica</h1>
+<p>Clique no link abaixo para ver os animes de ficção científica na Crunchyroll:</p>
+
+<a href="https://www.crunchyroll.com/videos/sci-fi" target="_blank" rel="noopener noreferrer">
+  Ver animes de ficção científica Crunchyroll
+</a>
+
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    Anime World 2025 • Feito Por Ariel
+  </footer>
+
+  <script>
+    // Seleciona todos os links e seções
+    const links = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = link.getAttribute('data-section');
+
+        // Remove "active" de todos
+        sections.forEach(sec => sec.classList.remove('active'));
+        links.forEach(l => l.classList.remove('active'));
+
+        // Mostra a seção correspondente
+        document.getElementById(target).classList.add('active');
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
